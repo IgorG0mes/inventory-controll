@@ -5,11 +5,9 @@ one:
   description: MyText
   subdomain: MyString
   cnpj: MyString
-  cpf: MyString
 
 two:
   name: MyString
   description: MyText
   subdomain: MyString
   cnpj: MyString
-  cpf: MyString

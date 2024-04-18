@@ -15,7 +15,6 @@ class CompaniesTest < ApplicationSystemTestCase
     click_on "New company"
 
     fill_in "Cnpj", with: @company.cnpj
-    fill_in "Cpf", with: @company.cpf
     fill_in "Description", with: @company.description
     fill_in "Name", with: @company.name
     fill_in "Subdomain", with: @company.subdomain
@@ -30,7 +29,6 @@ class CompaniesTest < ApplicationSystemTestCase
     click_on "Edit this company", match: :first
 
     fill_in "Cnpj", with: @company.cnpj
-    fill_in "Cpf", with: @company.cpf
     fill_in "Description", with: @company.description
     fill_in "Name", with: @company.name
     fill_in "Subdomain", with: @company.subdomain
