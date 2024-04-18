@@ -1,45 +1,45 @@
 require "application_system_test_case"
 
-class EmployeesTest < ApplicationSystemTestCase
+class UsersTest < ApplicationSystemTestCase
   setup do
-    @employee = employees(:one)
+    @user = users(:one)
   end
 
   test "visiting the index" do
-    visit employees_url
-    assert_selector "h1", text: "Employees"
+    visit users_url
+    assert_selector "h1", text: "Users"
   end
 
-  test "should create employee" do
-    visit employees_url
-    click_on "New employee"
+  test "should create user" do
+    visit users_url
+    click_on "New user"
 
-    fill_in "Cpf", with: @employee.cpf
-    fill_in "Job", with: @employee.job
-    fill_in "Name", with: @employee.name
-    click_on "Create Employee"
+    fill_in "Cpf", with: @user.cpf
+    fill_in "Job", with: @user.job
+    fill_in "Name", with: @user.name
+    click_on "Create User"
 
-    assert_text "Employee was successfully created"
+    assert_text "User was successfully created"
     click_on "Back"
   end
 
-  test "should update Employee" do
-    visit employee_url(@employee)
-    click_on "Edit this employee", match: :first
+  test "should update User" do
+    visit user_url(@user)
+    click_on "Edit this user", match: :first
 
-    fill_in "Cpf", with: @employee.cpf
-    fill_in "Job", with: @employee.job
-    fill_in "Name", with: @employee.name
-    click_on "Update Employee"
+    fill_in "Cpf", with: @user.cpf
+    fill_in "Job", with: @user.job
+    fill_in "Name", with: @user.name
+    click_on "Update User"
 
-    assert_text "Employee was successfully updated"
+    assert_text "User was successfully updated"
     click_on "Back"
   end
 
-  test "should destroy Employee" do
-    visit employee_url(@employee)
-    click_on "Destroy this employee", match: :first
+  test "should destroy User" do
+    visit user_url(@user)
+    click_on "Destroy this user", match: :first
 
-    assert_text "Employee was successfully destroyed"
+    assert_text "User was successfully destroyed"
   end
 end

@@ -1,48 +1,48 @@
 require "test_helper"
 
-class EmployeesControllerTest < ActionDispatch::IntegrationTest
+class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @employee = employees(:one)
+    @user = users(:one)
   end
 
   test "should get index" do
-    get employees_url
+    get users_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_employee_url
+    get new_user_url
     assert_response :success
   end
 
-  test "should create employee" do
-    assert_difference("Employee.count") do
-      post employees_url, params: { employee: { cpf: @employee.cpf, job: @employee.job, name: @employee.name } }
+  test "should create user" do
+    assert_difference("User.count") do
+      post users_url, params: { user: { cpf: @user.cpf, job: @user.job, name: @user.name } }
     end
 
-    assert_redirected_to employee_url(Employee.last)
+    assert_redirected_to user_url(User.last)
   end
 
-  test "should show employee" do
-    get employee_url(@employee)
+  test "should show user" do
+    get user_url(@user)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_employee_url(@employee)
+    get edit_user_url(@user)
     assert_response :success
   end
 
-  test "should update employee" do
-    patch employee_url(@employee), params: { employee: { cpf: @employee.cpf, job: @employee.job, name: @employee.name } }
-    assert_redirected_to employee_url(@employee)
+  test "should update user" do
+    patch user_url(@user), params: { user: { cpf: @user.cpf, job: @user.job, name: @user.name } }
+    assert_redirected_to user_url(@user)
   end
 
-  test "should destroy employee" do
-    assert_difference("Employee.count", -1) do
-      delete employee_url(@employee)
+  test "should destroy user" do
+    assert_difference("User.count", -1) do
+      delete user_url(@user)
     end
 
-    assert_redirected_to employees_url
+    assert_redirected_to users_url
   end
 end
